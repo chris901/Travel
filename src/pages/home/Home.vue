@@ -7,7 +7,8 @@
 import HomeHeader from './components/Header.vue'
 export default {
   name: 'Home',
-  component: HomeHeader
+  components: {
+    HomeHeader}
 }
 </script>
 
