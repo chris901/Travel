@@ -1,6 +1,6 @@
 <template>
 <div class="icons">
-  <swiper >
+  <swiper :options="swiperOption" >
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon"
              v-for="item of page"
@@ -18,50 +18,20 @@
 <script>
 export default{
   name: 'HomeIcons',
+  props: {
+    List: Array
+  },
   data () {
     return {
-      IconList: [{
-        id: '001',
-        iconURL: 'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        content: '热门景点'
-      }, {
-        id: '002',
-        iconURL: 'https://imgs.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-        content: '踏青赏花'
-      }, {
-        id: '003',
-        iconURL: 'https://imgs.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
-        content: '毕游榜单'
-      }, {
-        id: '004',
-        iconURL: 'https://imgs.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-        content: '热门景点'
-      }, {
-        id: '005',
-        iconURL: 'https://imgs.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-        content: '热门景点'
-      }, {
-        id: '006',
-        iconURL: 'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        content: '热门景点'
-      }, {
-        id: '007',
-        iconURL: 'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        content: '热门景点'
-      }, {
-        id: '008',
-        iconURL: 'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        content: '热门景点热门景点热门景点'
-      }, {
-        id: '009',
-        iconURL: 'https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        content: '热门景点'
-      }]}
+      swiperOption: {
+        autoplay: false
+      }
+    }
   },
   computed: {
     pages () {
       const pages = []
-      this.IconList.forEach((item, index) => {
+      this.List.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []

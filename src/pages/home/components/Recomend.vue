@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
      <ul>
-       <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+       <li class="item border-bottom" v-for="item of List" :key="item.id">
          <img class="item-img" :src='item.imgURL' alt="">
          <div class="item-info">
            <p class="item-title">{{item.title}}</p>
@@ -19,34 +19,8 @@
 <script>
 export default{
   name: 'HomeRecomend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgURL: 'https://imgs.qunarzz.com/sight/p0/1707/ab/abb70c851caaa6d8a3.img.jpg_200x200_b902dd9e.jpg',
-        title: '长隆水上乐园',
-        desc: '24983条评论',
-        count: '1999'
-      }, {
-        id: '002',
-        imgURL: 'https://imgs.qunarzz.com/sight/p0/1707/ab/abb70c851caaa6d8a3.img.jpg_200x200_b902dd9e.jpg',
-        title: '长隆水上乐园',
-        desc: '24983条评论',
-        count: '1999'
-      }, {
-        id: '003',
-        imgURL: 'https://imgs.qunarzz.com/sight/p0/1707/ab/abb70c851caaa6d8a3.img.jpg_200x200_b902dd9e.jpg',
-        title: '长隆水上乐园',
-        desc: '24983条评论',
-        count: '1999'
-      }, {
-        id: '004',
-        imgURL: 'https://imgs.qunarzz.com/sight/p0/1707/ab/abb70c851caaa6d8a3.img.jpg_200x200_b902dd9e.jpg',
-        title: '长隆水上乐园',
-        desc: '24983条评论',
-        count: '1999'
-      }]
-    }
+  props: {
+    List: Array
   }
 }
 
