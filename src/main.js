@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store'
 import 'styles/reset.css'
 import 'styles/border.css'
 // 移动端1px边框问题解决
@@ -20,6 +21,7 @@ new Vue({
   el: '#app',
   // 路由配置
   router,
+  store,
   components: { App: App },
   template: '<App/>'
 })
