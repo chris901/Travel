@@ -1,6 +1,8 @@
 <template>
   <div>
      <detail-banner></detail-banner>
+     <detail-header></detail-header>
+     <div class="content"></div>
   </div>
 </template>
 
@@ -16,6 +18,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="stylus" scoped>
+  .content
+   height:50rem
 
 </style>

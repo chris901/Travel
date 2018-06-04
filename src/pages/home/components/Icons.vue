@@ -73,9 +73,9 @@ export default{
       box-sizing:border-box
       paddind:.1rem
     .icon-imgContent
-      height:100%
+      height:85%
       display:block
-      margin:0 auto
+      margin:0.2rem auto
     .icon-desc
         position:absolute
         bottom:0;

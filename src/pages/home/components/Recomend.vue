@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="title">热销推荐</div>
+    <div class="title">
+      <img class="mp-title-img" src="http://img1.qunarzz.com/piao/fusion/1711/16/bfbb9874e8f11402.png" alt="热销推荐">
+      热销推荐</div>
      <ul>
        <router-link
          tag="li"
@@ -39,11 +41,15 @@ export default{
     background: #eeeeee
     text-indent:.2rem
     line-height: .8rem
+    .mp-title-img
+      width: 0.4rem
+      margin-bottom: 0.1rem
   .item
     overflow:hidden
     display:flex
     heigh:1.9rem
     position:relative
+    padding:0.15rem 0
     .item-img
      width:1.7rem
      height:1.7rem
@@ -66,8 +72,8 @@ export default{
         color:#ff8300
       .item-button
         float:right
-        background: #ff9300
-        color:#fff
+        background: #fff
+        color:#666
         border-radius:.06rem
         display:inline-block
         padding:.1rem

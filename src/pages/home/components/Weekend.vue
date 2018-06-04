@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="title">周末去哪儿</div>
+    <div class="title">
+      <img class="mp-title-img" src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt="周末去哪儿">
+      周末去哪儿
+    </div>
     <ul>
       <li class="item border-bottom" v-for="item of List" :key="item.id">
         <div class="img-warp">
@@ -32,6 +35,9 @@ export default{
      background: #eeeeee
      text-indent:.2rem
      line-height: .8rem
+     .mp-title-img
+       width: 0.4rem
+       margin-bottom: 0.1rem
     .img-warp
       overflow:hidden
       height:0
