@@ -4,5 +4,8 @@ export default {
     try {
       localStorage.city = city
     } catch (e) {}
+  },
+  changAccount (state, account) {
+    console.log(account)
   }
 }
